@@ -1,6 +1,6 @@
 <?php
 
-namespace PageBundle\Model\Traits;
+namespace Azhuro\Bundle\PageBundle\Model\Traits;
 
 trait RouteTrait
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace PageBundle\Model\Interfaces;
+namespace Azhuro\Bundle\PageBundle\Model\Interfaces;
 
 interface SeoInterface
 {

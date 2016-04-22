@@ -7,7 +7,7 @@
  * (c) Johnny Cottereau <johnny.cottereau@gmail.com>
  */
 
-namespace PageBundle\Manager;
+namespace Azhuro\Bundle\PageBundle\Manager;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use PageBundle\Model\Interfaces\PageInterface;

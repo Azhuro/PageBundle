@@ -1,6 +1,6 @@
 <?php
 
-namespace PageBundle\Repository;
+namespace Azhuro\Bundle\PageBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 

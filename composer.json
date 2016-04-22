@@ -1,0 +1,28 @@
+{
+  "name": "azhuro/page-bundle",
+  "type": "symfony-bundle",
+  "description": "Azhuro Page bundle.",
+  "keywords": ["cms", "page", "azhuro"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Johnny Cottereau",
+    }
+  ],
+  "require": {
+    "php": "^5.5.9|^7.0"
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-4": { "Azhuro\\Bundle\\PageBundle\\": "" }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.01-dev"
+    }
+  }
+}

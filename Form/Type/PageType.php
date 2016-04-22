@@ -3,7 +3,7 @@
  * (c) Johnny Cottereau <johnny.cottereau@gmail.com>
  */
 
-namespace PageBundle\Form\Type;
+namespace Azhuro\Bundle\PageBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace PageBundle\Model;
+namespace Azhuro\Bundle\PageBundle\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use PageBundle\Model\Interfaces\BlockInterface;

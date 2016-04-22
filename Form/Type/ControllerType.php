@@ -1,6 +1,6 @@
 <?php
 
-namespace PageBundle\Form\Type;
+namespace Azhuro\Bundle\PageBundle\Form\Type;
 
 use PageBundle\Resolver\ControllerResolver;
 use Symfony\Component\Form\AbstractType;

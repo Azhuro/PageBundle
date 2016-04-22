@@ -1,6 +1,6 @@
 <?php
 
-namespace PageBundle\DependencyInjection;
+namespace Azhuro\Bundle\PageBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

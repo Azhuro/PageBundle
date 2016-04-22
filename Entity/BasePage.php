@@ -1,6 +1,6 @@
 <?php
 
-namespace PageBundle\Entity;
+namespace Azhuro\Bundle\PageBundle\Entity;
 
 use PageBundle\Model\Page;
 

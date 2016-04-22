@@ -3,7 +3,7 @@
  * (c) Johnny Cottereau <johnny.cottereau@gmail.com>
  */
 
-namespace PageBundle\Templating\Helper;
+namespace Azhuro\Bundle\PageBundle\Templating\Helper;
 
 use PageBundle\Model\Interfaces\PageInterface;
 use Sonata\BlockBundle\Templating\Helper\BlockHelper;

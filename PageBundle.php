@@ -1,6 +1,6 @@
 <?php
 
-namespace PageBundle;
+namespace Azhuro\Bundle\PageBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

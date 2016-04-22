@@ -1,6 +1,6 @@
 <?php
 
-namespace PageBundle\Resolver;
+namespace Azhuro\Bundle\PageBundle\Resolver;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser;

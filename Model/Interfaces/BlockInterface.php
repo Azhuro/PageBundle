@@ -1,6 +1,6 @@
 <?php
 
-namespace PageBundle\Model\Interfaces;
+namespace Azhuro\Bundle\PageBundle\Model\Interfaces;
 
 use CoreBundle\Model\Interfaces\TimestampableInterface;
 use Doctrine\Common\Collections\ArrayCollection;

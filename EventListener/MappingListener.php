@@ -1,6 +1,6 @@
 <?php
 
-namespace PageBundle\EventListener;
+namespace Azhuro\Bundle\PageBundle\EventListener;
 
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Mapping\ClassMetadata;

@@ -1,6 +1,6 @@
 <?php
 
-namespace PageBundle\Twig;
+namespace Azhuro\Bundle\PageBundle\Twig;
 
 use PageBundle\Templating\Helper\PageHelper;
 

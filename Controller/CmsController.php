@@ -1,6 +1,6 @@
 <?php
 
-namespace PageBundle\Controller;
+namespace Azhuro\Bundle\PageBundle\Controller;
 
 use PageBundle\Model\Interfaces\PageInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
