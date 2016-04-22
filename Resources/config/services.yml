@@ -1,0 +1,62 @@
+parameters:
+    page.controller.cms_controller.class:       'PageBundle\Controller\CmsController'
+    page.router.dynamic_router.class:           'PageBundle\Router\DynamicRouter'
+    page.resolver.controller_resolver.class:    'PageBundle\Resolver\ControllerResolver'
+    page.event_listener.mapping_listener.class: 'PageBundle\EventListener\MappingListener'
+    page.manager.page_manager.class:            'PageBundle\Manager\PageManager'
+    page.manager.block_manager.class:           'PageBundle\Manager\BlockManager'
+    page.twig.page_extension.class:             'PageBundle\Twig\PageExtension'
+    page.templating.helper.page_helper.class:   'PageBundle\Templating\Helper\PageHelper'
+
+services:
+    page.controller.cms_controller:
+        class: '%page.controller.cms_controller.class%'
+        arguments:
+            - '@templating'
+
+    page.router.dynamic_router:
+        class: '%page.router.dynamic_router.class%'
+        arguments:
+            - '@page.manager.page_manager'
+
+    page.resolver.controller_resolver:
+        class: '%page.resolver.controller_resolver.class%'
+        parent: 'controller_resolver'
+        arguments:
+            - '%kernel.bundles%'
+
+    page.event_listener.mapping_listener:
+        class: '%page.event_listener.mapping_listener.class%'
+        arguments:
+            - '%page.entity.page_class%'
+            - '%page.entity.block_class%'
+        tags:
+            - { name: 'doctrine.event_listener', event: 'loadClassMetadata' }
+
+    page.manager.page_manager:
+        class: '%page.manager.page_manager.class%'
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '%page.entity.page_class%'
+
+    page.manager.block_manager:
+        class: '%page.manager.block_manager.class%'
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '%page.entity.block_class%'
+
+    page.twig.page_extension:
+        class: '%page.twig.page_extension.class%'
+        arguments:
+           - '@page.templating.helper.page_helper'
+        calls:
+            - [initRuntime, ['@twig']]
+        tags:
+            - { name: twig.extension }
+
+    page.templating.helper.page_helper:
+        class: '%page.templating.helper.page_helper.class%'
+        arguments:
+            - '@sonata.block.templating.helper'
+        calls:
+            - [render, ['@?']]

@@ -1,0 +1,7 @@
+page_page:
+    resource: "@PageBundle/Resources/config/routing/page.yml"
+    prefix:   /page
+
+page_block:
+    resource: "@PageBundle/Resources/config/routing/block.yml"
+    prefix:   /block

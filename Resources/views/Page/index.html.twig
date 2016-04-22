@@ -1,0 +1,56 @@
+{% extends 'PageBundle::layout.html.twig' %}
+
+{% block container %}
+    <h1>Page list</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Slug</th>
+                <th>Controller</th>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Metatitle</th>
+                <th>Metadescription</th>
+                <th>Metakeywords</th>
+                {#<th>Stylesheet</th>#}
+                {#<th>Javascript</th>#}
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for page in pages %}
+            <tr>
+                <td><a href="{{ path('page_show', { 'id': page.id }) }}">{{ page.id }}</a></td>
+                <td>{{ page.slug }}</td>
+                <td>{{ page.controller }}</td>
+                <td>{{ page.title }}</td>
+                <td>{{ page.content }}</td>
+                <td>{{ page.metaTitle }}</td>
+                <td>{{ page.metaDescription }}</td>
+                <td>{{ page.metaKeywords }}</td>
+                {#<td>{{ page.stylesheet }}</td>#}
+                {#<td>{{ page.javascript }}</td>#}
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('page_show', { 'id': page.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('page_edit', { 'id': page.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+                <td><a href="{{ path(page) }}">Link</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('page_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

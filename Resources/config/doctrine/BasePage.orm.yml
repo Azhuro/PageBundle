@@ -1,0 +1,52 @@
+PageBundle\Entity\BasePage:
+    type: mappedSuperclass
+    fields:
+        title:
+            type: string
+            column: title
+            length: 255
+        content:
+            type: text
+            column: content
+        enabled:
+            type: boolean
+            column: enabled
+            nullable: true
+            default: false
+        createdAt:
+            type: datetime
+            column: created_at
+        updatedAt:
+            type: datetime
+            column: updated_at
+        slug:
+            type: string
+            column: slug
+            length: 255
+            unique: true
+        controller:
+            type: string
+            column: controller
+            length: 255
+            unique: true
+            nullable: true
+        metaTitle:
+            type: string
+            column: meta_title
+            length: 255
+            nullable: true
+        metaDescription:
+            type: text
+            column: meta_description
+            nullable: true
+        metaKeywords:
+            type: string
+            column: meta_keywords
+            length: 255
+            nullable: true
+#        stylesheet:
+#            type: text
+#            nullable: true
+#        javascript:
+#            type: text
+#            nullable: true

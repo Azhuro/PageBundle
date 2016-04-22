@@ -1,0 +1,10 @@
+Application\BlockBundle\Entity\Page:
+    type: entity
+    table: page_page
+    repositoryClass: Doctrine\ORM\EntityRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO

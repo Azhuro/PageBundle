@@ -1,0 +1,24 @@
+block_index:
+    path:     /
+    defaults: { _controller: "PageBundle:Block:index" }
+    methods:  GET
+
+block_show:
+    path:     /{id}/show
+    defaults: { _controller: "PageBundle:Block:show" }
+    methods:  GET
+
+block_new:
+    path:     /new
+    defaults: { _controller: "PageBundle:Block:new" }
+    methods:  [GET, POST]
+
+block_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PageBundle:Block:edit" }
+    methods:  [GET, POST]
+
+block_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PageBundle:Block:delete" }
+    methods:  DELETE

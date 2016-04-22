@@ -1,0 +1,45 @@
+{% extends 'PageBundle::layout.html.twig' %}
+
+{% block content %}
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ page.id }}</td>
+        </tr>
+        <tr>
+            <th>Slug</th>
+            <td>{{ page.slug }}</td>
+        </tr>
+        <tr>
+            <th>Title</th>
+            <td>{{ page.title }}</td>
+        </tr>
+        <tr>
+            <th>Content</th>
+            <td>{{ page_render(page) }}</td>
+        </tr>
+        <tr>
+            <th>Metatitle</th>
+            <td>{{ page.metaTitle }}</td>
+        </tr>
+        <tr>
+            <th>Metadescription</th>
+            <td>{{ page.metaDescription }}</td>
+        </tr>
+        <tr>
+            <th>Metakeywords</th>
+            <td>{{ page.metaKeywords }}</td>
+        </tr>
+        {#<tr>#}
+            {#<th>Stylesheet</th>#}
+            {#<td>{{ page.stylesheet }}</td>#}
+        {#</tr>#}
+        {#<tr>#}
+            {#<th>Javascript</th>#}
+            {#<td>{{ page.javascript }}</td>#}
+        {#</tr>#}
+        </tbody>
+    </table>
+{% endblock %}

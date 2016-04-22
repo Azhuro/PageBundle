@@ -1,0 +1,49 @@
+{% extends 'PageBundle::layout.html.twig' %}
+
+{% block container %}
+    <h1>block list</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Type</th>
+                {#<th>Settings</th>#}
+                <th>Enabled</th>
+                <th>Position</th>
+                <th>Page</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for block in blocks %}
+            <tr>
+                <td><a href="{{ path('block_show', { 'id': block.id }) }}">{{ block.id }}</a></td>
+                <td>{{ block.name }}</td>
+                <td>{{ block.type }}</td>
+                {#<td>{{ block.settings }}</td>#}
+                <td>{{ block.enabled }}</td>
+                <td>{{ block.position }}</td>
+                <td>{% for page in block.pages %}{{ page.id }}/{% endfor %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('block_show', { 'id': block.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('block_edit', { 'id': block.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('block_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

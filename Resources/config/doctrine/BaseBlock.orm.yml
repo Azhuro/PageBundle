@@ -1,0 +1,30 @@
+PageBundle\Entity\BaseBlock:
+    type: mappedSuperclass
+    fields:
+        name:
+            type: string
+            column: name
+            length: 255
+            nullable: true
+        type:
+            type: string
+            column: type
+            length: 64
+        settings:
+            type: json
+            column: settings
+        enabled:
+            type: boolean
+            column: enabled
+            nullable: true
+            default: false
+        position:
+            type: integer
+            column: position
+            nullable: true
+        createdAt:
+            type: datetime
+            column: created_at
+        updatedAt:
+            type: datetime
+            column: updated_at
