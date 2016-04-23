@@ -2,7 +2,7 @@
 
 namespace Azhuro\Bundle\PageBundle\Twig;
 
-use PageBundle\Templating\Helper\PageHelper;
+use Azhuro\Bundle\PageBundle\Templating\Helper\PageHelper;
 
 class PageExtension extends \Twig_Extension
 {

@@ -2,8 +2,8 @@
 
 namespace Azhuro\Bundle\PageBundle\Controller;
 
-use PageBundle\Manager\PageManager;
-use PageBundle\Model\Interfaces\PageInterface;
+use Azhuro\Bundle\PageBundle\Manager\PageManager;
+use Azhuro\Bundle\PageBundle\Model\Interfaces\PageInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

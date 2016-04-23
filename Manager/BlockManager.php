@@ -10,8 +10,8 @@
 namespace Azhuro\Bundle\PageBundle\Manager;
 
 use Doctrine\Common\Persistence\ObjectManager;
-use PageBundle\Model\Interfaces\PageInterface;
-use PageBundle\Repository\PageRepository;
+use Azhuro\Bundle\PageBundle\Model\Interfaces\PageInterface;
+use Azhuro\Bundle\PageBundle\Repository\PageRepository;
 
 class BlockManager implements BlockManagerInterface
 {

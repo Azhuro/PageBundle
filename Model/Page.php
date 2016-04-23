@@ -4,12 +4,12 @@ namespace Azhuro\Bundle\PageBundle\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
 
-use PageBundle\Model\Interfaces\BlockInterface;
-use PageBundle\Model\Interfaces\PageInterface;
+use Azhuro\Bundle\PageBundle\Model\Interfaces\BlockInterface;
+use Azhuro\Bundle\PageBundle\Model\Interfaces\PageInterface;
 
 use CoreBundle\Model\Traits\TimestampableTrait;
-use PageBundle\Model\Traits\RouteTrait;
-use PageBundle\Model\Traits\SeoTrait;
+use Azhuro\Bundle\PageBundle\Model\Traits\RouteTrait;
+use Azhuro\Bundle\PageBundle\Model\Traits\SeoTrait;
 
 /**
  * Page

@@ -5,7 +5,7 @@
 
 namespace Azhuro\Bundle\PageBundle\Templating\Helper;
 
-use PageBundle\Model\Interfaces\PageInterface;
+use Azhuro\Bundle\PageBundle\Model\Interfaces\PageInterface;
 use Sonata\BlockBundle\Templating\Helper\BlockHelper;
 
 class PageHelper

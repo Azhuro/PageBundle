@@ -2,7 +2,7 @@
 
 namespace Azhuro\Bundle\PageBundle\Entity;
 
-use PageBundle\Model\Block;
+use Azhuro\Bundle\PageBundle\Model\Block;
 
 /**
  * Class BaseBlock

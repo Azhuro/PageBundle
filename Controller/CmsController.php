@@ -2,7 +2,7 @@
 
 namespace Azhuro\Bundle\PageBundle\Controller;
 
-use PageBundle\Model\Interfaces\PageInterface;
+use Azhuro\Bundle\PageBundle\Model\Interfaces\PageInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Component\HttpFoundation\Response;

@@ -1,4 +1,4 @@
-PageBundle\Entity\BaseBlock:
+Azhuro\Bundle\PageBundle\Entity\BaseBlock:
     type: mappedSuperclass
     fields:
         name:

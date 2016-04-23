@@ -6,11 +6,11 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Johnny Cottereau",
+      "name": "Johnny Cottereau"
     }
   ],
   "require": {
-    "php": "^5.5.9|^7.0"
+    "php": ">=5.3.9"
   },
   "config": {
     "bin-dir": "bin"

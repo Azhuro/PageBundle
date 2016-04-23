@@ -1,4 +1,4 @@
-PageBundle\Entity\BasePage:
+Azhuro\Bundle\PageBundle\Entity\BasePage:
     type: mappedSuperclass
     fields:
         title:

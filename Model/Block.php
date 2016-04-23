@@ -3,8 +3,8 @@
 namespace Azhuro\Bundle\PageBundle\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use PageBundle\Model\Interfaces\BlockInterface;
-use PageBundle\Model\Interfaces\PageInterface;
+use Azhuro\Bundle\PageBundle\Model\Interfaces\BlockInterface;
+use Azhuro\Bundle\PageBundle\Model\Interfaces\PageInterface;
 use Sonata\BlockBundle\Model\Block as BaseBlock;
 
 /**

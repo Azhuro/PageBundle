@@ -1,12 +1,12 @@
 parameters:
-    page.controller.cms_controller.class:       'PageBundle\Controller\CmsController'
-    page.router.dynamic_router.class:           'PageBundle\Router\DynamicRouter'
-    page.resolver.controller_resolver.class:    'PageBundle\Resolver\ControllerResolver'
-    page.event_listener.mapping_listener.class: 'PageBundle\EventListener\MappingListener'
-    page.manager.page_manager.class:            'PageBundle\Manager\PageManager'
-    page.manager.block_manager.class:           'PageBundle\Manager\BlockManager'
-    page.twig.page_extension.class:             'PageBundle\Twig\PageExtension'
-    page.templating.helper.page_helper.class:   'PageBundle\Templating\Helper\PageHelper'
+    page.controller.cms_controller.class:       'Azhuro\Bundle\PageBundle\Controller\CmsController'
+    page.router.dynamic_router.class:           'Azhuro\Bundle\PageBundle\Router\DynamicRouter'
+    page.resolver.controller_resolver.class:    'Azhuro\Bundle\PageBundle\Resolver\ControllerResolver'
+    page.event_listener.mapping_listener.class: 'Azhuro\Bundle\PageBundle\EventListener\MappingListener'
+    page.manager.page_manager.class:            'Azhuro\Bundle\PageBundle\Manager\PageManager'
+    page.manager.block_manager.class:           'Azhuro\Bundle\PageBundle\Manager\BlockManager'
+    page.twig.page_extension.class:             'Azhuro\Bundle\PageBundle\Twig\PageExtension'
+    page.templating.helper.page_helper.class:   'Azhuro\Bundle\PageBundle\Templating\Helper\PageHelper'
 
 services:
     page.controller.cms_controller:

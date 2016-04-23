@@ -2,9 +2,9 @@
 
 namespace Azhuro\Bundle\PageBundle\Router;
 
-use PageBundle\Manager\PageManagerInterface;
-use PageBundle\Model\Interfaces\PageInterface;
-use PageBundle\Model\Interfaces\RouteInterface;
+use Azhuro\Bundle\PageBundle\Manager\PageManagerInterface;
+use Azhuro\Bundle\PageBundle\Model\Interfaces\PageInterface;
+use Azhuro\Bundle\PageBundle\Model\Interfaces\RouteInterface;
 use Symfony\Cmf\Component\Routing\ChainedRouterInterface;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\Generator\UrlGenerator;

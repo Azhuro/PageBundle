@@ -2,7 +2,7 @@
 
 namespace Azhuro\Bundle\PageBundle\Entity;
 
-use PageBundle\Model\Page;
+use Azhuro\Bundle\PageBundle\Model\Page;
 
 /**
  * Class BasePage

@@ -48,7 +48,7 @@ class MappingListener
 
         $reflexionClass = $metadata->getReflectionClass();
 
-        if ($reflexionClass->implementsInterface('PageBundle\Model\Interfaces\PageInterface')) {
+        if ($reflexionClass->implementsInterface('Azhuro\Bundle\PageBundle\Model\Interfaces\PageInterface')) {
 
             $metadata->mapManyToMany([
                 'fieldName' => 'blocks',
@@ -73,7 +73,7 @@ class MappingListener
                     ]
                 ]
             ]);
-        } else if ($reflexionClass->implementsInterface('PageBundle\Model\Interfaces\BlockInterface')) {
+        } else if ($reflexionClass->implementsInterface('Azhuro\Bundle\PageBundle\Model\Interfaces\BlockInterface')) {
 
             $metadata->mapManyToMany([
                 'fieldName' => 'pages',

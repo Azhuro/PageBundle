@@ -6,7 +6,7 @@
 namespace Azhuro\Bundle\PageBundle\Manager;
 
 use Doctrine\Common\Persistence\ObjectRepository;
-use PageBundle\Model\Interfaces\PageInterface;
+use Azhuro\Bundle\PageBundle\Model\Interfaces\PageInterface;
 
 interface PageManagerInterface
 {
