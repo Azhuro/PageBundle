@@ -2,7 +2,7 @@
 
 namespace Azhuro\Bundle\PageBundle\Model\Interfaces;
 
-use CoreBundle\Model\Interfaces\TimestampableInterface;
+use Azhuro\Bundle\CoreBundle\Model\Interfaces\TimestampableInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Sonata\BlockBundle\Model\BlockInterface as BaseBlockInterface;
 

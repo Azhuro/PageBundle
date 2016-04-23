@@ -1,24 +1,24 @@
-page_index:
+azhuro_page_index:
     path:     /
-    defaults: { _controller: "PageBundle:Page:index" }
+    defaults: { _controller: "AzhuroPageBundle:Page:index" }
     methods:  GET
 
-page_show:
+azhuro_page_show:
     path:     /{id}/show
-    defaults: { _controller: "PageBundle:Page:show" }
+    defaults: { _controller: "AzhuroPageBundle:Page:show" }
     methods:  GET
 
-page_new:
+azhuro_page_new:
     path:     /new
-    defaults: { _controller: "PageBundle:Page:new" }
+    defaults: { _controller: "AzhuroPageBundle:Page:new" }
     methods:  [GET, POST]
 
-page_edit:
+azhuro_page_edit:
     path:     /{id}/edit
-    defaults: { _controller: "PageBundle:Page:edit" }
+    defaults: { _controller: "AzhuroPageBundle:Page:edit" }
     methods:  [GET, POST]
 
-page_delete:
+azhuro_page_delete:
     path:     /{id}/delete
-    defaults: { _controller: "PageBundle:Page:delete" }
+    defaults: { _controller: "AzhuroPageBundle:Page:delete" }
     methods:  DELETE

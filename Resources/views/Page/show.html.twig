@@ -1,4 +1,4 @@
-{% extends 'PageBundle::layout.html.twig' %}
+{% extends 'AzhuroPageBundle::layout.html.twig' %}
 
 {% block container %}
     <h1>Page</h1>
@@ -46,10 +46,10 @@
 
     <ul>
         <li>
-            <a href="{{ path('page_index') }}">Back to the list</a>
+            <a href="{{ path('azhuro_page_index') }}">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('page_edit', { 'id': page.id }) }}">Edit</a>
+            <a href="{{ path('azhuro_page_index', { 'id': page.id }) }}">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}

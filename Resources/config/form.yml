@@ -1,6 +1,6 @@
 parameters:
-    page.form.type.controller_type.class: 'PageBundle\Form\Type\ControllerType'
-    page.form.type.page_type.class:       'PageBundle\Form\Type\PageType'
+    page.form.type.controller_type.class: 'Azhuro\Bundle\PageBundle\Form\Type\ControllerType'
+    page.form.type.page_type.class:       'Azhuro\Bundle\PageBundle\Form\Type\PageType'
 
 services:
     page.form.type.controller_type:

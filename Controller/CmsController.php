@@ -29,7 +29,7 @@ class CmsController extends Controller
      */
     public function execute(PageInterface $page)
     {
-        return $this->templating->renderResponse('PageBundle:Index:index.html.twig',
+        return $this->templating->renderResponse('AzhuroPageBundle:Index:index.html.twig',
             array(
                 'page' => $page
             ));

@@ -7,7 +7,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 /**
  * Class Configuration
- * @package PageBundle\DependencyInjection
+ * @package Azhuro\Bundle\PageBundle\DependencyInjection
  */
 class Configuration implements ConfigurationInterface
 {
@@ -17,7 +17,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $node = $treeBuilder->root('page')->children();
+        $node = $treeBuilder->root('azhuro_page')->children();
 
         $node
             ->arrayNode('class')

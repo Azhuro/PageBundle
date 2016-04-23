@@ -23,7 +23,7 @@ class BlockController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('PageBundle:Block:index.html.twig', array(
+        return $this->render('AzhuroPageBundle:Block:index.html.twig', array(
             'blocks' => $this->getBlockManager()->findBlocks(),
         ));
     }
@@ -47,7 +47,7 @@ class BlockController extends Controller
             return $this->redirectToRoute('block_show', array('id' => $page->getId()));
         }
 
-        return $this->render('PageBundle:Block:new.html.twig', array(
+        return $this->render('AzhuroPageBundle:Block:new.html.twig', array(
             'page' => $page,
             'form' => $form->createView(),
         ));
@@ -67,7 +67,7 @@ class BlockController extends Controller
 
         $deleteForm = $this->createDeleteForm($page);
 
-        return $this->render('PageBundle:Block:show.html.twig', array(
+        return $this->render('AzhuroPageBundle:Block:show.html.twig', array(
             'page' => $page,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -98,7 +98,7 @@ class BlockController extends Controller
             return $this->redirectToRoute('block_edit', array('id' => $page->getId()));
         }
 
-        return $this->render('PageBundle:Block:edit.html.twig', array(
+        return $this->render('AzhuroPageBundle:Block:edit.html.twig', array(
             'page' => $page,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

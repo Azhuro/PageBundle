@@ -2,12 +2,12 @@
 
 namespace Azhuro\Bundle\PageBundle\Model;
 
+use Azhuro\Bundle\CoreBundle\Model\Traits\TimestampableTrait;
 use Doctrine\Common\Collections\ArrayCollection;
 
 use Azhuro\Bundle\PageBundle\Model\Interfaces\BlockInterface;
 use Azhuro\Bundle\PageBundle\Model\Interfaces\PageInterface;
 
-use CoreBundle\Model\Traits\TimestampableTrait;
 use Azhuro\Bundle\PageBundle\Model\Traits\RouteTrait;
 use Azhuro\Bundle\PageBundle\Model\Traits\SeoTrait;
 

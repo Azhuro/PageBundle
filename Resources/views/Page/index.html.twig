@@ -1,4 +1,4 @@
-{% extends 'PageBundle::layout.html.twig' %}
+{% extends 'AzhuroPageBundle::layout.html.twig' %}
 
 {% block container %}
     <h1>Page list</h1>
@@ -22,7 +22,7 @@
         <tbody>
         {% for page in pages %}
             <tr>
-                <td><a href="{{ path('page_show', { 'id': page.id }) }}">{{ page.id }}</a></td>
+                <td><a href="{{ path('azhuro_page_show', { 'id': page.id }) }}">{{ page.id }}</a></td>
                 <td>{{ page.slug }}</td>
                 <td>{{ page.controller }}</td>
                 <td>{{ page.title }}</td>
@@ -35,10 +35,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('page_show', { 'id': page.id }) }}">show</a>
+                            <a href="{{ path('azhuro_page_show', { 'id': page.id }) }}">show</a>
                         </li>
                         <li>
-                            <a href="{{ path('page_edit', { 'id': page.id }) }}">edit</a>
+                            <a href="{{ path('azhuro_page_edit', { 'id': page.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -50,7 +50,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('page_new') }}">Create a new entry</a>
+            <a href="{{ path('azhuro_page_new') }}">Create a new entry</a>
         </li>
     </ul>
 {% endblock %}

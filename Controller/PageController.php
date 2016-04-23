@@ -20,7 +20,7 @@ class PageController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('PageBundle:Page:index.html.twig', array(
+        return $this->render('AzhuroPageBundle:Page:index.html.twig', array(
             'pages' => $this->getPageManager()->findPages(),
         ));
     }
@@ -41,10 +41,10 @@ class PageController extends Controller
             $em->persist($page);
             $em->flush();
 
-            return $this->redirectToRoute('page_show', array('id' => $page->getId()));
+            return $this->redirectToRoute('azhuro_page_show', array('id' => $page->getId()));
         }
 
-        return $this->render('PageBundle:Page:new.html.twig', array(
+        return $this->render('AzhuroPageBundle:Page:new.html.twig', array(
             'page' => $page,
             'form' => $form->createView(),
         ));
@@ -64,7 +64,7 @@ class PageController extends Controller
 
         $deleteForm = $this->createDeleteForm($page);
 
-        return $this->render('PageBundle:Page:show.html.twig', array(
+        return $this->render('AzhuroPageBundle:Page:show.html.twig', array(
             'page' => $page,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -92,10 +92,10 @@ class PageController extends Controller
             $em->persist($page);
             $em->flush();
 
-            return $this->redirectToRoute('page_edit', array('id' => $page->getId()));
+            return $this->redirectToRoute('azhuro_page_edit', array('id' => $page->getId()));
         }
 
-        return $this->render('PageBundle:Page:edit.html.twig', array(
+        return $this->render('AzhuroPageBundle:Page:edit.html.twig', array(
             'page' => $page,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
@@ -124,7 +124,7 @@ class PageController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('page_index');
+        return $this->redirectToRoute('azhuro_page_index');
     }
 
     /**
@@ -137,7 +137,7 @@ class PageController extends Controller
     private function createDeleteForm(PageInterface $page)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('page_delete', array('id' => $page->getId())))
+            ->setAction($this->generateUrl('azhuro_page_delete', array('id' => $page->getId())))
             ->setMethod('DELETE')
             ->getForm()
             ;
@@ -149,7 +149,7 @@ class PageController extends Controller
      */
     public function homepageAction(PageInterface $page)
     {
-        return $this->render('PageBundle:Index:homepage.html.twig', array(
+        return $this->render('AzhuroPageBundle:Index:homepage.html.twig', array(
             'page' => $page
         ));
     }
