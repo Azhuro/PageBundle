@@ -3,8 +3,10 @@
 namespace Azhuro\Bundle\PageBundle\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
+
 use Azhuro\Bundle\PageBundle\Model\Interfaces\BlockInterface;
 use Azhuro\Bundle\PageBundle\Model\Interfaces\PageInterface;
+
 use Sonata\BlockBundle\Model\Block as BaseBlock;
 
 /**
@@ -33,10 +35,13 @@ class Block extends BaseBlock implements BlockInterface
 
     /**
      * @param ArrayCollection $pages
+     * @return $this
      */
     public function setPages($pages)
     {
         $this->pages = $pages;
+
+        return $this;
     }
 
     /**

@@ -32,6 +32,10 @@ class PageHelper
     {
         $content = $page->getContent();
 
+        if (!count($page->getBlocks())) {
+            return $content;
+        }
+
         $pattern = <<<PATTERN
 /\{\{\s?(.*?)(?=\}\})\s?\}\}/
 PATTERN;
@@ -48,11 +52,14 @@ PATTERN;
 
         for ($i = 0; $i < count($matches[1]); $i++) {
 
+            $variable = $matches[0][$i];
+
             // Check if block(*) exists in content
             preg_match_all($pattern, $matches[1][$i], $blocks);
             foreach ($page->getBlocks() as $block) {
                 if (in_array($block->getName(), $blocks[1])) {
-                    $content = str_replace($matches[0][$i], $this->blockHelper->render($block), $content);
+                    $blockContent = $this->blockHelper->render($block);
+                    $content = str_replace($variable, $blockContent, $content);
                 }
             }
         }

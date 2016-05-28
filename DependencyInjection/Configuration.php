@@ -25,7 +25,8 @@ class Configuration implements ConfigurationInterface
                 ->children()
                     ->scalarNode('page')->defaultValue('Application\PageBundle\Entity\Page')->end()
                     ->scalarNode('block')->defaultValue('Application\PageBundle\Entity\Block')->end()
-                ->end()
+                    ->scalarNode('layout')->defaultValue('Application\PageBundle\Entity\Layout')->end()
+            ->end()
             ->end();
 
         return $treeBuilder;

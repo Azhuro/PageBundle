@@ -3,24 +3,25 @@
 namespace Azhuro\Bundle\PageBundle\Controller;
 
 use Azhuro\Bundle\PageBundle\Model\Interfaces\PageInterface;
+use Azhuro\Bundle\PageBundle\Twig\Loader\PageTwigLoader;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Component\HttpFoundation\Response;
 
 class CmsController extends Controller
 {
     /**
-     * @var EngineInterface
+     * @var \Twig_Environment
      */
-    protected $templating;
+    protected $twig;
 
     /**
-     * ServiceController constructor.
-     * @param EngineInterface $templating
+     * CmsController constructor.
+     * @param \Twig_Environment $twig
      */
-    public function __construct(EngineInterface $templating)
+    public function __construct(\Twig_Environment $twig)
     {
-        $this->templating = $templating;
+        $this->twig = $twig;
     }
 
     /**
@@ -29,9 +30,19 @@ class CmsController extends Controller
      */
     public function execute(PageInterface $page)
     {
-        return $this->templating->renderResponse('AzhuroPageBundle:Index:index.html.twig',
-            array(
-                'page' => $page
-            ));
+        $loader = new \Twig_Loader_Chain(array(
+            $this->twig->getLoader(),
+            new PageTwigLoader($page, $this->twig),
+        ));
+
+        $this->twig->setLoader($loader);
+
+        $response = new Response();
+        // TODO put this in config
+        $response->setContent($this->twig->render('AzhuroPageBundle:Index:index.html.twig', array(
+            'page' => $page,
+        )));
+
+        return $response;
     }
 }

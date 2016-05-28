@@ -1,16 +1,16 @@
 parameters:
-    page.form.type.controller_type.class: 'Azhuro\Bundle\PageBundle\Form\Type\ControllerType'
-    page.form.type.page_type.class:       'Azhuro\Bundle\PageBundle\Form\Type\PageType'
+    azhuro_page.form.type.controller_type.class: 'Azhuro\Bundle\PageBundle\Form\Type\ControllerType'
+    azhuro_page.form.type.page_type.class:       'Azhuro\Bundle\PageBundle\Form\Type\PageType'
 
 services:
-    page.form.type.controller_type:
-        class: '%page.form.type.controller_type.class%'
+    azhuro_page.form.type.controller_type:
+        class: '%azhuro_page.form.type.controller_type.class%'
         arguments:
-            - '@page.resolver.controller_resolver'
+            - '@azhuro_page.resolver.controller_resolver'
         tags:
           - { name: form.type, alias: 'controller_type' }
 
-    page.form.type.page_type:
-        class: '%page.form.type.page_type.class%'
+    azhuro_page.form.type.page_type:
+        class: '%azhuro_page.form.type.page_type.class%'
         tags:
           - { name: form.type, alias: 'page_type' }

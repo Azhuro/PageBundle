@@ -3,6 +3,7 @@
 namespace Azhuro\Bundle\PageBundle\Model;
 
 use Azhuro\Bundle\CoreBundle\Model\Traits\TimestampableTrait;
+use Azhuro\Bundle\PageBundle\Model\Interfaces\LayoutInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 
 use Azhuro\Bundle\PageBundle\Model\Interfaces\BlockInterface;
@@ -47,6 +48,11 @@ class Page implements PageInterface
      */
     protected $blocks;
 
+    /**
+     * @var LayoutInterface
+     */
+    protected $layout;
+
     ///**
     // * @var string
     // */
@@ -74,7 +80,7 @@ class Page implements PageInterface
 
     /**
      * @param string $title
-     * @return Page
+     * @return $this
      */
     public function setTitle($title)
     {
@@ -93,7 +99,7 @@ class Page implements PageInterface
 
     /**
      * @param string $content
-     * @return Page
+     * @return $this
      */
     public function setContent($content)
     {
@@ -119,11 +125,14 @@ class Page implements PageInterface
     }
 
     /**
-     * @param boolean $enabled
+     * @param bool $enabled
+     * @return $this
      */
     public function setEnabled($enabled)
     {
         $this->enabled = $enabled;
+
+        return $this;
     }
 
     /**
@@ -136,10 +145,13 @@ class Page implements PageInterface
 
     /**
      * @param ArrayCollection $blocks
+     * @return $this
      */
     public function setBlocks($blocks)
     {
         $this->blocks = $blocks;
+
+        return $this;
     }
 
     /**
@@ -156,6 +168,25 @@ class Page implements PageInterface
     public function removeBlock(BlockInterface $block)
     {
         $this->blocks->removeElement($block);
+    }
+
+    /**
+     * @return LayoutInterface
+     */
+    public function getLayout()
+    {
+        return $this->layout;
+    }
+
+    /**
+     * @param LayoutInterface $layout
+     * @return $this
+     */
+    public function setLayout(LayoutInterface $layout)
+    {
+        $this->layout = $layout;
+
+        return $this;
     }
 
     ///**

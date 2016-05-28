@@ -61,7 +61,17 @@ interface PageInterface extends RouteInterface, SeoInterface, TimestampableInter
      * @param BlockInterface $block
      */
     public function removeBlock(BlockInterface $block);
-    
+
+    /**
+     * @return LayoutInterface
+     */
+    public function getLayout();
+
+    /**
+     * @param LayoutInterface $layout
+     */
+    public function setLayout(LayoutInterface $layout);
+
     ///**
     // * Set stylesheet
     // *

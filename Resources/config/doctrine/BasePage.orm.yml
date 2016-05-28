@@ -50,3 +50,21 @@ Azhuro\Bundle\PageBundle\Entity\BasePage:
 #        javascript:
 #            type: text
 #            nullable: true
+
+    manyToMany:
+        blocks:
+            targetEntity: 'Azhuro\Bundle\PageBundle\Model\Interfaces\BlockInterface'
+            inversedBy: pages
+            joinTable:
+              name: page_block_link
+              joinColumns:
+                page_id:
+                  referencedColumnName: id
+              inverseJoinColumns:
+                block_id:
+                  referencedColumnName: id
+
+    manyToOne:
+        layout:
+            targetEntity: 'Azhuro\Bundle\PageBundle\Model\Interfaces\LayoutInterface'
+            inversedBy: pages

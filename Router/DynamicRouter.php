@@ -112,7 +112,7 @@ class DynamicRouter implements ChainedRouterInterface
             throw new ResourceNotFoundException($pathinfo, 0);
         }
 
-        $cmsController = 'page.controller.cms_controller:execute';
+        $cmsController = 'azhuro_page.controller.cms_controller:execute';
 
         return array (
             '_controller' => $page->hasController() ? $page->getController() : $cmsController,

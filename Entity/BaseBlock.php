@@ -6,7 +6,7 @@ use Azhuro\Bundle\PageBundle\Model\Block;
 
 /**
  * Class BaseBlock
- * @package PageBundle\Entity
+ * @package Azhuro\Bundle\PageBundle\Entity
  */
 abstract class BaseBlock extends Block
 {

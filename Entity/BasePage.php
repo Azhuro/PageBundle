@@ -6,7 +6,7 @@ use Azhuro\Bundle\PageBundle\Model\Page;
 
 /**
  * Class BasePage
- * @package PageBundle\Entity
+ * @package Azhuro\Bundle\PageBundle\Entity
  */
 abstract class BasePage extends Page
 {

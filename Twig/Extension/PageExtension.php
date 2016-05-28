@@ -1,6 +1,9 @@
 <?php
+/**
+ * (c) Johnny Cottereau <johnny.cottereau@gmail.com>
+ */
 
-namespace Azhuro\Bundle\PageBundle\Twig;
+namespace Azhuro\Bundle\PageBundle\Twig\Extension;
 
 use Azhuro\Bundle\PageBundle\Templating\Helper\PageHelper;
 

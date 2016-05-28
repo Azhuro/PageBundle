@@ -25,9 +25,13 @@ class AzhuroPageExtension extends Extension
 
         $container->setParameter('page.entity.page_class', $config['class']['page']);
         $container->setParameter('page.entity.block_class', $config['class']['block']);
+        $container->setParameter('page.entity.layout_class', $config['class']['layout']);
 
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.yml');
         $loader->load('form.yml');
+
+        //TODO load only if allow on general config
+        $loader->load('admin.yml');
     }
 }

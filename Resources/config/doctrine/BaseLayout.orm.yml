@@ -1,0 +1,29 @@
+Azhuro\Bundle\PageBundle\Entity\BaseLayout:
+    type: mappedSuperclass
+    fields:
+        name:
+            type: string
+            column: name
+            length: 255
+            nullable: false
+        content:
+            type: text
+            column: content
+            length: 255
+            nullable: true
+        enabled:
+            type: boolean
+            column: enabled
+            nullable: true
+            default: false
+        createdAt:
+            type: datetime
+            column: created_at
+        updatedAt:
+            type: datetime
+            column: updated_at
+
+    oneToMany:
+        pages:
+            targetEntity: 'Azhuro\Bundle\PageBundle\Model\Interfaces\LayoutInterface'
+            mappedBy: layout

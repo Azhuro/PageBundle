@@ -28,3 +28,18 @@ Azhuro\Bundle\PageBundle\Entity\BaseBlock:
         updatedAt:
             type: datetime
             column: updated_at
+
+    manyToMany:
+        pages:
+            targetEntity: 'Azhuro\Bundle\PageBundle\Model\Interfaces\PageInterface'
+            mappedBy: blocks
+
+    manyToOne:
+        parent:
+            targetEntity: 'Azhuro\Bundle\PageBundle\Model\Interfaces\BlockInterface'
+            inversedBy: children
+
+    oneToMany:
+        children:
+            targetEntity: 'Azhuro\Bundle\PageBundle\Model\Interfaces\BlockInterface'
+            mappedBy: parent

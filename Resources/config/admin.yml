@@ -1,0 +1,16 @@
+parameters:
+    azhuro_page.admin.page_admin.class:                'Azhuro\Bundle\PageBundle\Admin\PageAdmin'
+    azhuro_page.admin.layout_admin.class:              'Azhuro\Bundle\PageBundle\Admin\LayoutAdmin'
+
+services:
+    azhuro_page.admin.page_admin:
+        class: '%azhuro_page.admin.page_admin.class%'
+        arguments: [~, '%page.entity.page_class%', ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Page }
+
+    azhuro_page.admin.layout_admin:
+        class: '%azhuro_page.admin.layout_admin.class%'
+        arguments: [~, '%page.entity.layout_class%', ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Layout }

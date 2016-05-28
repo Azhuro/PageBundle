@@ -159,6 +159,6 @@ class PageController extends Controller
      */
     protected function getPageManager()
     {
-        return $this->container->get('page.manager.page_manager');
+        return $this->container->get('azhuro_page.manager.page_manager');
     }
 }
